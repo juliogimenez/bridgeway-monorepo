@@ -1,0 +1,40 @@
+{
+  "name": "bridgewayjs-monorepo",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.2.0",
+  "description": "",
+  "author": "Julio Giménez <julio.visionarte@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/juliogimenez/bridgeway-monorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliogimenez/bridgeway-monorepo.git"
+  },
+  "bugs": "https://github.com/juliogimenez/bridgeway-monorepo/issues",
+  "keywords": [
+    "bundler",
+    "rollup",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "pnpm -r --filter='./packages/*' run build",
+    "dev": "pnpm -r --parallel --filter='./packages/*' run dev",
+    "format": "prettier --write --cache .",
+    "test:unit": "vitest run"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@types/node": "^18.15.11",
+    "glob": "^10.2.2",
+    "prettier": "^2.8.7",
+    "rimraf": "^5.0.0",
+    "rollup": "^3.20.2",
+    "tslib": "^2.3.1",
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.1"
+  }
+}
