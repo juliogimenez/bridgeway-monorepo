@@ -1,14 +1,12 @@
 import HttpHandler from './core/http-handler'
-import { IBridgewayConfig } from './types'
-import checkObject from './helpers/check-object'
+import { IBridgewayConfig, EndpointConfig } from './types'
 
-console.log(checkObject({ name: 'john', age: 38 }, ['name', 'age']))
 class HttpRepository extends HttpHandler {
   constructor(config: IBridgewayConfig) {
     super(config)
   }
 
-  createMethods(config: object) {}
+  createMethods(config: EndpointConfig[]) {}
 }
 
 export default HttpRepository
